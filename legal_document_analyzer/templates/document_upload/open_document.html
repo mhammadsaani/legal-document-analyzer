@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .document-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        overflow: auto;
+        border-right: 1px solid black;
+      }
+      .options-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+      }
+      .document {
+        width: 100%;
+        height: 100%;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .option {
+        margin: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #3498db;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .option:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="document-container">
+      <embed
+        class="document"
+        src="http://127.0.0.1:8000/doc/{{ path }}"
+        type="application/pdf"
+      />
+    </div>
+    <div class="options-container">
+      <div class="options">
+        <a class="option" href="{% url "bert_classifier"  path %}">Classify</a>
+      </div>
+    </div>
+  </body>
+</html>

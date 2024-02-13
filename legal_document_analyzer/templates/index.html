@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Document Analyzer | HOMEPAGE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      text-align: center;
+      margin-top: 100px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      color: #495057;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Legal Document Analyzer</h1>
+    <p>
+      Upload legal documents for analysis and get user-friendly summaries.
+      Identify key entities, extract relevant information, and make informed decisions.
+    </p>
+
+    <a href="{% url "sign-up" %}" class="btn btn-primary btn-lg">Sign Up</a>
+    <a href="{% url "login" %}" class="btn btn-secondary btn-lg">Login</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
